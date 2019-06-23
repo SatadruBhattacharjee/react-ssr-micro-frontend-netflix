@@ -1,0 +1,20 @@
+{
+  "name": "layout-service",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap" : "lerna bootstrap",
+    "start": "node server.js",
+    "build:fragments": "lerna run build",
+    "start:fragments": "lerna run --parallel start",
+    "watch:fragments": "lerna run --parallel watch"
+  },
+  "devDependencies": {
+    "lerna": "^3.15.0",
+    "node-tailor": "^3.9.2"
+  },
+  "dependencies": {
+  }
+}

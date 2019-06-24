@@ -10,13 +10,18 @@ class PromotionContent extends Component {
   };
 
   componentDidMount = () => {
-    this.getMovie();
+    this.getMovie(63351);
+      window.addEventListener("profileChange", this.handleProfileChange, false);
   };
 
+    handleProfileChange = (event) => {
+        console.info("Custom data is: ", event.detail);
+        this.getMovie(event.detail.promotionId);
+    };
 
-  getMovie = () => {
+  getMovie = (id) => {
     /** Movie Id for the Narcos series  */
-    const movieId = 63351;
+    let movieId = id;
     /** Make Api call to retrieve the details for a single movie  */
     const url = `https://api.themoviedb.org/3/tv/${movieId}?api_key=224ce27b38a3805ecf6f6c36eb3ba9d0`;
     axios

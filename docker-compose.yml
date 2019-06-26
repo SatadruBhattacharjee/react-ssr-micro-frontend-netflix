@@ -1,0 +1,35 @@
+# docker-compose up --force-recreate --build
+# https://medium.com/travis-on-docker/how-to-run-dockerized-apps-on-heroku-and-its-pretty-great-76e07e610e22
+version: "3.7"
+
+services:
+
+  layout-service:
+    build: .
+    hostname: service-layout
+    ports:
+    - 8085:80
+
+  fragment-common:
+    build: packages/fragment-common
+    hostname: service-fragment-common
+    ports:
+    - 8086:80
+
+  fragment-header:
+    build: packages/fragment-header
+    hostname: service-fragment-header
+    ports:
+    - 8087:80
+
+  fragment-promotion:
+    build: packages/fragment-promotion
+    hostname: service-fragment-promotion
+    ports:
+    - 8088:80
+
+  fragment-listings:
+    build: packages/fragment-listings
+    hostname: service-fragment-listings
+    ports:
+    - 8089:80

@@ -1,3 +1,5 @@
+![Preview](./.github/preview.gif)
+
 # How to Run
 
 - To install the dependencies `npm run bootstrap`
@@ -11,3 +13,7 @@
 - Header PORT : 8087
 - Promotion PORT : 8088
 - Listing PORT : 8089
+
+### Using Docker
+
+`docker-compose up`

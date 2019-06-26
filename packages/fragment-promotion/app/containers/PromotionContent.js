@@ -11,7 +11,7 @@ class PromotionContent extends Component {
 
   componentDidMount = () => {
     this.getMovie(63351);
-      window.addEventListener("profileChange", this.handleProfileChange, false);
+    window.addEventListener("profileChange", this.handleProfileChange, false);
   };
 
     handleProfileChange = (event) => {

@@ -3,6 +3,8 @@ const url = require('url')
 const fs = require('fs')
 
 const server = http.createServer((req, res) => {
+  const hostname = req.headers.host;
+  console.log("Hostname: " + hostname)
   const pathname = url.parse(req.url).pathname
   const jsHeader = { 'Content-Type': 'application/javascript' }
   switch(pathname) {
@@ -12,7 +14,7 @@ const server = http.createServer((req, res) => {
     default:
       res.writeHead(200, {
         'Content-Type': 'text/html',
-        'Link': '<http://localhost:8087/public/bundle.js>; rel="fragment-script"'
+        'Link': `<http://${hostname}/public/bundle.js>; rel="fragment-script"`
       })
       return res.end('')
   }

@@ -584,14 +584,36 @@
 </head>
 <body>
 <div>
-    <div id="header"></div>
+    <fragment src="http://localhost:8087"></fragment>
     <div class="container">
-        <div id="promotion" class="header"></div>
-        <div id="listings" class="movieShowcase"></div>
+        <fragment src="http://localhost:8088"></fragment>
+        <!-- <div id="listings" class="movieShowcase"></div> -->
+        <fragment src="http://localhost:8089"></fragment>
     </div>
-</div>
-<fragment src="http://localhost:8087"></fragment>
-<fragment src="http://localhost:8088"></fragment>
-<fragment src="http://localhost:8089"></fragment>
+<script type="text/javascript" src='http://localhost:8087/public/bundle.js'></script>
+<script type="text/javascript" src='http://localhost:8088/public/bundle.js'></script>
+<script type="text/javascript" src='http://localhost:8089/public/bundle.js'></script>
+<!-- <script>
+        (function (d) {
+            require(d);
+            var arr = ['react', 'react-dom'];
+            while (i = arr.pop()) (function (dep) {
+                define(dep, d, function (b) {
+                    return b[dep];
+                })
+            })(i);
+        }(['http://localhost:8088/public/bundle.js']));
+</script>
+<script>
+        (function (d) {
+            require(d);
+            var arr = ['react', 'react-dom'];
+            while (i = arr.pop()) (function (dep) {
+                define(dep, d, function (b) {
+                    return b[dep];
+                })
+            })(i);
+        }(['http://localhost:8089/public/bundle.js']));
+    </script> -->
 </body>
 </html>

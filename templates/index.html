@@ -587,13 +587,21 @@
     <fragment src="http://localhost:8087"></fragment>
     <div class="container">
         <fragment src="http://localhost:8088"></fragment>
-        <!-- <div id="listings" class="movieShowcase"></div> -->
         <fragment src="http://localhost:8089"></fragment>
     </div>
-<script type="text/javascript" src='http://localhost:8087/public/bundle.js'></script>
-<script type="text/javascript" src='http://localhost:8088/public/bundle.js'></script>
-<script type="text/javascript" src='http://localhost:8089/public/bundle.js'></script>
-<!-- <script>
+
+<script>
+    (function (d) {
+        require(d);
+        var arr = ['react', 'react-dom'];
+        while (i = arr.pop()) (function (dep) {
+            define(dep, d, function (b) {
+                return b[dep];
+            })
+        })(i);
+    }(['http://localhost:8087/public/bundle.js']));
+</script>
+<script>
         (function (d) {
             require(d);
             var arr = ['react', 'react-dom'];
@@ -614,6 +622,6 @@
                 })
             })(i);
         }(['http://localhost:8089/public/bundle.js']));
-    </script> -->
+    </script>
 </body>
 </html>

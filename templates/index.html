@@ -570,17 +570,8 @@
                 display: none; } }
 
     </style>
-    <script>
-        (function (d) {
-            require(d);
-            var arr = ['react', 'react-dom'];
-            while (i = arr.pop()) (function (dep) {
-                define(dep, d, function (b) {
-                    return b[dep];
-                })
-            })(i);
-        }(['http://localhost:8086/public/bundle.js']));
-    </script>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 </head>
 <body>
 <div>
@@ -593,27 +584,5 @@
 <script type="text/javascript" src='http://localhost:8087/public/bundle.js'></script>
 <script type="text/javascript" src='http://localhost:8088/public/bundle.js'></script>
 <script type="text/javascript" src='http://localhost:8089/public/bundle.js'></script>
-<!-- <script>
-        (function (d) {
-            require(d);
-            var arr = ['react', 'react-dom'];
-            while (i = arr.pop()) (function (dep) {
-                define(dep, d, function (b) {
-                    return b[dep];
-                })
-            })(i);
-        }(['http://localhost:8088/public/bundle.js']));
-</script>
-<script>
-        (function (d) {
-            require(d);
-            var arr = ['react', 'react-dom'];
-            while (i = arr.pop()) (function (dep) {
-                define(dep, d, function (b) {
-                    return b[dep];
-                })
-            })(i);
-        }(['http://localhost:8089/public/bundle.js']));
-    </script> -->
 </body>
 </html>

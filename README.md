@@ -1,6 +1,6 @@
 ![Preview](./.github/preview.gif)
 
-# Modifications from the base repo. include convert SPA into ServerSide react rendering with client side hydration.
+# Modifications from the base repo. include convert SPA into Server-side react rendered application with client side hydration.
 
 Branches :
 

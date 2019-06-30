@@ -5,9 +5,12 @@
 Branches :
 
 master
+
 Description: Makes use of loading asynchronous modules through requirejs
 
+
 ssr_without_requirejs
+
 Description: Requests static resources through global <script> tags. Loads React and ReactDOM as global object.
 
 

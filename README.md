@@ -2,7 +2,7 @@
 
 # Modifications
 
-forked client-side micro-frontend to experiement with server-side react rendered application with client side hydration.
+forked client-side micro-frontend to experiment with server-side react rendered application with client side hydration.
 
 Branches :
 

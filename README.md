@@ -1,5 +1,16 @@
 ![Preview](./.github/preview.gif)
 
+# Modifications from the base repo. include convert SPA into ServerSide react rendering with client side hydration.
+
+Branches :
+
+master
+Description: Makes use of loading asynchronous modules through requirejs
+
+ssr_without_requirejs
+Description: Requests static resources through global <script> tags. Loads React and ReactDOM as global object.
+
+
 # How to Run
 
 - To install the dependencies `npm run bootstrap`
@@ -13,7 +24,3 @@
 - Header PORT : 8087
 - Promotion PORT : 8088
 - Listing PORT : 8089
-
-### Using Docker
-
-`docker-compose up`

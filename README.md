@@ -1,8 +1,8 @@
 ![Preview](./.github/preview.gif)
 
-# Modifications from the base repo. include 
+# Modifications
 
-client-side micro-frontend into server-side react rendered application with client side hydration.
+forked client-side micro-frontend to experiement with server-side react rendered application with client side hydration.
 
 Branches :
 

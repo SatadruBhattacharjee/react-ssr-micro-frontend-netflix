@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import NavigationItem from './NavigationItem'
 import SearchLogo from '../static/images/search-icon.svg';
-import NetflixLogo from '../static/images/jawwy_logo.svg';
+import NetflixLogo from '../static/images/netflix-logo.svg';
 import BellLogo from '../static/images/bell-logo.svg';
 import DropdownArrow from '../static/images/drop-down-arrow.svg';
 import DropdownContent from "./DropdownContent";

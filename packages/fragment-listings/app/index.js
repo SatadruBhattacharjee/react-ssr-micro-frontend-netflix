@@ -8,15 +8,16 @@ import promise from 'redux-promise';
 
 import App from './containers/ListingContent';
 
-
+const preloadedState = window.__PRELOADED_LISTINGS || {};
+//delete window.__PRELOADED_LISTINGS;
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 const app = (
-    <Provider store={createStoreWithMiddleware(reducers)}>
+    <Provider store={createStoreWithMiddleware(reducers, preloadedState)}>
         <BrowserRouter>
             <App />
         </BrowserRouter>
     </Provider>
 );
 
-ReactDOM.render(app, document.getElementById('listings'));
+ReactDOM.hydrate(app, document.getElementById('listings'));

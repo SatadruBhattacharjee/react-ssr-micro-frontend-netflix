@@ -4,10 +4,13 @@ import Header from '../components/Header';
 
 class PromotionContent extends Component {
 
-  state = {
-    /** Will hold our chosen movie to display on the header */
-    selectedMovie: {}
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      /** Will hold our chosen movie to display on the header */
+      selectedMovie: props.initialData || {}
+    };
+  }
 
   componentDidMount = () => {
     this.getMovie(63351);

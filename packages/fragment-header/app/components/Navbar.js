@@ -13,6 +13,7 @@ class Header extends Component {
   }
 
   componentDidMount() {
+    console.log('component did mount heder navbar')
     window.addEventListener('scroll', this.handleScroll);
   }
 
